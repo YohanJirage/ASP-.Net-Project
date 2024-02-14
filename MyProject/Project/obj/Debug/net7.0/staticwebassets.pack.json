@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\Project.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\Images\\Product\\225328f1-e1d8-45a8-bd49-f660370a982b.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Product\\225328f1-e1d8-45a8-bd49-f660370a982b.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\Images\\Product\\ebc89035-d423-4b38-8ae2-c4007a94d450.png",
+      "PackagePath": "staticwebassets\\Images\\Product\\ebc89035-d423-4b38-8ae2-c4007a94d450.png"
+    },
+    {
       "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\js\\Product.js",
+      "PackagePath": "staticwebassets\\js\\Product.js"
     },
     {
       "Id": "C:\\Users\\Prashnat\\Desktop\\YOHAN\\.NET CORE MVC APP\\ASP-.Net-Project\\MyProject\\Project\\wwwroot\\js\\site.js",

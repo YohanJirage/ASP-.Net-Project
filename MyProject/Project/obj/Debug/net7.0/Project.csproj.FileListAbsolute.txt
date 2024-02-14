@@ -516,3 +516,6 @@ C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Pro
 C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\obj\Debug\net7.0\Project.pdb
 C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\obj\Debug\net7.0\Project.genruntimeconfig.cache
 C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\obj\Debug\net7.0\ref\Project.dll
+C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\Prashnat\Desktop\YOHAN\.NET CORE MVC APP\ASP-.Net-Project\MyProject\Project\obj\Debug\net7.0\Project.MvcApplicationPartsAssemblyInfo.cs
