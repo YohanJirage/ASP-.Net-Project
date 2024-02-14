@@ -1,7 +1,8 @@
-﻿using MyProject.DataAccess.Data
-    ;
+﻿using MyProject.DataAccess.Data ;
+using MyProject.DataAccess.Repository.IRepository;
 using MyProject.Models.Models;
 using Microsoft.AspNetCore.Mvc;
+using MyProject.DataAccess.Repository;
 
 namespace Project.Controllers
 {
@@ -11,14 +12,14 @@ namespace Project.Controllers
     public class CategoryController : Controller
     {
 
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db)
+        private readonly IUnitOfWork unitOfWork;
+        public CategoryController(IUnitOfWork db)
         {
-            _db = db;
+            unitOfWork = db;
         }
         public IActionResult Index()
         {
-            List<Category> CategoryList = _db.categories.ToList();
+            List<Category> CategoryList = unitOfWork.Category.GetAll().ToList();
              
              return View(CategoryList);
         }
@@ -33,8 +34,8 @@ namespace Project.Controllers
         {
             if(ModelState.IsValid)
             {
-                _db.categories.Add(c);
-                _db.SaveChanges();
+                unitOfWork.Category.Add(c);
+                unitOfWork.Save();
                 TempData["success"] = "Category Is Created";
                 return RedirectToAction("Index");
             }
@@ -48,7 +49,7 @@ namespace Project.Controllers
             {
                 return NotFound();
             }
-            Category? editCat = _db.categories.Find(id);
+            Category? editCat = unitOfWork.Category.Get(u=>u.Id==id);
              if(editCat == null)
             {
                 return NotFound();
@@ -61,8 +62,8 @@ namespace Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.categories.Update(c);
-                _db.SaveChanges();
+                unitOfWork.Category.Update(c);
+                unitOfWork.Save();
                 TempData["success"] = "Category Is Edited";
                 return RedirectToAction("Index");
             }
@@ -76,7 +77,7 @@ namespace Project.Controllers
             {
                 return NotFound();
             }
-            Category? editCat = _db.categories.Find(id);
+            Category? editCat = unitOfWork.Category.Get(u => u.Id == id);
             if (editCat == null)
             {
                 return NotFound();
@@ -87,12 +88,12 @@ namespace Project.Controllers
         [HttpPost,ActionName("Delete") ]   
         public IActionResult DeletPost(Category c)
         {
-            Category? cat = _db.categories.Find(c.Id);
+            Category? cat = unitOfWork.Category.Get(u => u.Id == c.Id); 
 
             if(cat != null)
             {
-                _db.categories.Remove(cat);
-                _db.SaveChanges();
+                unitOfWork.Category.Remove(cat);
+                unitOfWork.Save();
                 TempData["success"] = "Category Is Deleted";
                 return RedirectToAction("Index");
             }
